@@ -10,6 +10,7 @@ Please download the weights from [here](https://drive.google.com/drive/folders/1
 The dataset structure, including images and labels, can be found in [interaction.py](https://github.com/mft2023/SlowFast/blob/main/slowfast/datasets/interaction.py).  
 The training hyperparameters for interaction detection and hand role classification can be found in [SLOWFAST_8x8_R50_Interaction.yaml](https://github.com/mft2023/SlowFast/blob/main/slowfast/Interaction/SLOWFAST_8x8_R50_Interaction.yaml) and [SLOWFAST_8x8_R50_Manipulation.yaml](https://github.com/mft2023/SlowFast/blob/main/slowfast/Interaction/SLOWFAST_8x8_R50_Manipulation.yaml), respectively.
 
+Training and testing mode can be enabled in the yaml files.  
 Launch training and testing with:
 ```
 python tools/run_net.py --cfg path_to_Interaction.yaml_file
