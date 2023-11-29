@@ -1,4 +1,0 @@
-hand state: R-S
-R hand bbx: [326, 272, 403, 327]
-hand state: R-S
-R hand bbx: [326, 272, 403, 327]

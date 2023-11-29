@@ -1,4 +1,0 @@
-hand state: L-N
-L hand bbx: [321, 388, 358, 404]
-hand state: L-N
-L hand bbx: [321, 388, 358, 404]
