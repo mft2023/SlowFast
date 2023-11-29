@@ -6,5 +6,5 @@ The inputs for the three models were the images of cropped hand regions of the d
 This repository was modified from the [SlowFast network for MECCANO dataset](https://github.com/fpv-iplab/MECCANO) and took the weight to re-train the model to classify the interaction and hand roles of stroke survivors.  
 Please download the files from [here](https://drive.google.com/drive/folders/1cc71O4XT0etAUXAAbIXLQANWnE7LHPnn?usp=sharing) and put them under _slowfast/Interaction_.  
  
-The dataset structure can be found in [interaction.py](https://github.com/mft2023/SlowFast/blob/main/slowfast/datasets/interaction.py).  
+The dataset structure, including images and labels, can be found in [interaction.py](https://github.com/mft2023/SlowFast/blob/main/slowfast/datasets/interaction.py).  
 The training hyperparameters for interaction detection and hand role classification can be found in [SLOWFAST_8x8_R50_Interaction.yaml](https://github.com/mft2023/SlowFast/blob/main/slowfast/Interaction/SLOWFAST_8x8_R50_Interaction.yaml) and [SLOWFAST_8x8_R50_Manipulation.yaml](https://github.com/mft2023/SlowFast/blob/main/slowfast/Interaction/SLOWFAST_8x8_R50_Manipulation.yaml), respectively.
