@@ -1,0 +1,8 @@
+hand state: R-S
+R hand bbx: [507, 47, 587, 123]
+hand state: R-S
+R hand bbx: [368, 154, 455, 223]
+hand state: R-S
+R hand bbx: [507, 47, 587, 123]
+hand state: R-S
+R hand bbx: [368, 154, 455, 223]

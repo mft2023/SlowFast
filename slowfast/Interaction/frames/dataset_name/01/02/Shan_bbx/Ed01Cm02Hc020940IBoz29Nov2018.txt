@@ -1,0 +1,4 @@
+hand state: R-P
+R hand bbx: [304, 105, 396, 183]
+hand state: L-P
+L hand bbx: [172, 102, 296, 170]

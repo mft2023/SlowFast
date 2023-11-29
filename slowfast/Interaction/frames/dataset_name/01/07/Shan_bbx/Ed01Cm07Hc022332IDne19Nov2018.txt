@@ -1,0 +1,4 @@
+hand state: R-S
+R hand bbx: [360, 253, 446, 315]
+hand state: R-S
+R hand bbx: [360, 253, 446, 315]
