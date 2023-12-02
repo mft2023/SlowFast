@@ -86,4 +86,4 @@ DATA_LOADER:
 NUM_GPUS: 1
 NUM_SHARDS: 1
 RNG_SEED: 0
-OUTPUT_DIR: "/home/tsaim/anaconda3/envs/pyslowfast/slowfast/slowfast/Interaction/output/"
+OUTPUT_DIR: "{path to results folder}/slowfast/Interaction/output/"
