@@ -69,7 +69,7 @@ TEST:
 TENSORBOARD:
   ENABLE: True
   LOG_DIR: "" # Leave empty to use cfg.OUTPUT_DIR/runs-{cfg.TRAIN.DATASET} as path.
-  CLASS_NAMES_PATH: "{path to .json file}/slowfast/Interaction/classes_manipulation.json"# Path to json file providing class_name - id mapping.
+  CLASS_NAMES_PATH: "{path to .json file}/slowfast/Interaction/classes_manipulation.json"# Path to json file providing class_name - id mapping. {0:non-manipulation/stabilization, 1:manipulation}
   CONFUSION_MATRIX:
     ENABLE: True
     SUBSET_PATH: "{path to .txt file}/slowfast/Interaction/classnames_manipulation.txt"# Path to txt file contains class names separated by newline characters.
