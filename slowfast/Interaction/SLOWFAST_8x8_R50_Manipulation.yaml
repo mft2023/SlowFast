@@ -1,23 +1,23 @@
 TRAIN:
   ENABLE: True
   DATASET: Interaction
-  BATCH_SIZE: 7 ### Make sure length of train_loder is not 0
+  BATCH_SIZE: 7
   EVAL_PERIOD: 5
   CHECKPOINT_PERIOD: 5
   CHECKPOINT_EPOCH_RESET: True
-  CHECKPOINT_FILE_PATH: '/home/tsaim/anaconda3/envs/pyslowfast/slowfast/slowfast/Interaction/SLOWFAST_8x8_R50_MECCANO.pyth'
+  CHECKPOINT_FILE_PATH: '{path to the pre-trained model}/slowfast/Interaction/SLOWFAST_8x8_R50_MECCANO.pyth'
   AUTO_RESUME: True
 DATA:
-  PATH_TO_DATA_DIR: "/home/tsaim/anaconda3/envs/pyslowfast/slowfast/slowfast/Interaction/" #/path_to_your_data_dir/
-  PATH_PREFIX: 'frames' # video folder under data_dir
-  NUM_FRAMES: 16#########frames in one instance
+  PATH_TO_DATA_DIR: "{path to the data folder}/slowfast/Interaction/" #/path_to_your_data_dir/
+  PATH_PREFIX: 'frames'
+  NUM_FRAMES: 16
   SAMPLING_RATE: 30
   TRAIN_JITTER_SCALES: [256, 320]
   TRAIN_CROP_SIZE: 256
   TEST_CROP_SIZE: 256 
   INPUT_CHANNEL_NUM: [3, 3]
 SLOWFAST:
-  ALPHA: 4 ### need to be factor of NUM_FRAMES
+  ALPHA: 4 
   BETA_INV: 8
   FUSION_CONV_CHANNEL_RATIO: 2
   FUSION_KERNEL_SZ: 7
@@ -50,7 +50,7 @@ SOLVER:
   WARMUP_START_LR: 0.01
   OPTIMIZING_METHOD: sgd
 MODEL:
-  NUM_CLASSES: 2# interaction and non-interaction
+  NUM_CLASSES: 2# manipulation and stabilization
   ARCH: slowfast
   MODEL_NAME: SlowFast
   LOSS_FUNC: cross_entropy 
@@ -59,9 +59,9 @@ TEST:
   ENABLE: False
   DATASET: Interaction
   BATCH_SIZE: 10
-  CHECKPOINT_FILE_PATH: '/home/tsaim/anaconda3/envs/pyslowfast/slowfast/slowfast/Interaction/output/checkpoints/checkpoint_epoch_00030.pyth'
+  CHECKPOINT_FILE_PATH: '{path to the desired model}/slowfast/Interaction/output/checkpoints/checkpoint_epoch_00030.pyth'
   CHECKPOINT_TYPE: 'pytorch'#caffe2
-  SAVE_RESULTS_PATH: 'Prediction_GT_manip_LOSOCV_Home_HomeLab_subj26_BalancedLoss20.pickle'
+  SAVE_RESULTS_PATH: '{filename of generated predictions}.pickle'
   
 # DETECTION:
 #   ENABLE: True
@@ -69,19 +69,19 @@ TEST:
 TENSORBOARD:
   ENABLE: True
   LOG_DIR: "" # Leave empty to use cfg.OUTPUT_DIR/runs-{cfg.TRAIN.DATASET} as path.
-  CLASS_NAMES_PATH: "//home/tsaim/anaconda3/envs/pyslowfast/slowfast/slowfast/Interaction/classes_manipulation.json"# Path to json file providing class_name - id mapping.
+  CLASS_NAMES_PATH: "{path to .json file}/slowfast/Interaction/classes_manipulation.json"# Path to json file providing class_name - id mapping.
   CONFUSION_MATRIX:
     ENABLE: True
-    SUBSET_PATH: "/home/tsaim/anaconda3/envs/pyslowfast/slowfast/slowfast/Interaction/classnames_manipulation.txt"# Path to txt file contains class names separated by newline characters.
+    SUBSET_PATH: "{path to .txt file}/slowfast/Interaction/classnames_manipulation.txt"# Path to txt file contains class names separated by newline characters.
                  # Only classes in this file will be visualized in the confusion matrix.
   HISTOGRAM:
     ENABLE: True
     TOPK: 2   # Top-k most frequently predicted classes for each class in the dataset.
-    SUBSET_PATH: "/home/tsaim/anaconda3/envs/pyslowfast/slowfast/slowfast/Interaction/classnames_manipulation.txt" # Path to txt file contains class names separated by newline characters.
+    SUBSET_PATH: "{path to .txt file}/slowfast/Interaction/classnames_manipulation.txt" # Path to txt file contains class names separated by newline characters.
                   #Only classes in this file will be visualized with histograms.
 ################################
 DATA_LOADER:
-  NUM_WORKERS: 2#16
+  NUM_WORKERS: 2
   PIN_MEMORY: True
 NUM_GPUS: 1
 NUM_SHARDS: 1
