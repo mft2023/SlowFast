@@ -18,6 +18,11 @@ Launch training and testing with:
 ```
 python tools/run_net.py --cfg path_to_Interaction.yaml_file
 ```
+## 5. Read results
+Check the absolute paths of the TargetLabeling_{dataset name}.xlsx, prediction folder, participants_info.xlsx, and annotation folder in the [SlowFast_results.py]().
+```
+python SlowFast_results.py
+```
 
 # Cite
 If you find this repository useful in your research, please consider citing:
