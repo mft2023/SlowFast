@@ -40,8 +40,8 @@ def find_in_list(A,B):#A:subj,frame; B:list
     return num
 
 #get target list and participant info
-target_label = pd.read_excel('{path to the excel file with all analyzed tasks/frames}/TargetLabeling_Home.xlsx',header=None);
-target_info=target_label.iloc[3:75,0:6] #each raw includes: task name, task type:bilateral(b) or one-handed(o) task, sub, start frame, end frame, video set 
+target_tasks = pd.read_excel('{path to the excel file with all analyzed tasks/frames}/TargetLabeling_Home.xlsx',header=None);
+target_info=target_tasks.iloc[3:75,0:6] #each raw includes: task name, task type:bilateral(b) or one-handed(o) task, sub, start frame, end frame, video set 
 target_list=target_info.values.tolist()
 
 # For interaction:
@@ -58,7 +58,7 @@ file_folder='{path to results folder}/'+dataset+'/Home/';
 file_path=glob.glob(file_folder+'/Results/*.pickle');
 
 saveRoot=file_folder;
-Participant_info=pd.read_excel('{path to the file that includes participant id and their affected side}/participants info.xlsx',sheet_name='demographic');
+Participant_info=pd.read_excel('{path to the file that includes participant id and their affected side}/participants_info.xlsx',sheet_name='demographic');
 GT_labeling_Folder_HomeLab='{path to HomeLab dataset annotations}/Documents for Home Lab/Labeled xlsx/';
 GT_labeling_Folder_Home='{path to Home dataset annotations}/Documents for Home/Labeled xlsx/';
 
