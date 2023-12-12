@@ -19,8 +19,8 @@ Launch training and testing with:
 python tools/run_net.py --cfg path_to_Interaction.yaml_file
 ```
 ## 5. Read results
-Check the absolute paths of the TargetLabeling_{dataset name}.xlsx, prediction folder, participants_info.xlsx, and annotation folder in the [SlowFast_results.py] (https://github.com/mft2023/SlowFast/blob/main/SlowFast_result.py). Some examples for [target tasks in Home dataset](https://github.com/mft2023/SlowFast/blob/main/TargetLabeling_Home.xlsx) and [participant info](https://github.com/mft2023/SlowFast/blob/main/participants_info.xlsx) are listed.   
-This script is set as hand role results, if you like to get interaction results, please go to [line 47](https://github.com/mft2023/SlowFast/blob/039723f275eed258a0e632eafa047d3a53be70a1/SlowFast_result.py#L48C1-L48C1) to uncomment the section.  
+Check the absolute paths of the TargetLabeling_{dataset name}.xlsx, prediction folder, participants_info.xlsx, and annotation folder in the [SlowFast_results.py](https://github.com/mft2023/SlowFast/blob/main/SlowFast_result.py). Examples for [target tasks in Home dataset](https://github.com/mft2023/SlowFast/blob/main/TargetLabeling_Home.xlsx) and [participant info](https://github.com/mft2023/SlowFast/blob/main/participants_info.xlsx) are provided.   
+This SlowFast_results.py script is set for hand role results, if you like to get interaction results, please go to [line 47](https://github.com/mft2023/SlowFast/blob/039723f275eed258a0e632eafa047d3a53be70a1/SlowFast_result.py#L48C1-L48C1) to uncomment the section for interaction.  
 ```
 python SlowFast_results.py
 ```
